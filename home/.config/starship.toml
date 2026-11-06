@@ -1,0 +1,31 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[time]
+disabled = true
+format = '[$time]($style) '
+
+[gcloud]
+disabled = true
+
+[helm]
+disabled = false
+
+[nodejs]
+disabled = false
+
+[python]
+disabled = false
+
+[package]
+disabled = true
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "fg:yellow"
+

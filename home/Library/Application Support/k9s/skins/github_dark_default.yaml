@@ -1,0 +1,127 @@
+# -----------------------------------------------------------------------------
+# GitHub Dark Default Skin
+# -----------------------------------------------------------------------------
+# Styles...
+foreground: &foreground "#e6edf3"
+background: &background "#0d1117"
+background_secondary: &background_secondary "#161b22"
+background_dark: &background_dark "#04070d"
+black: &black "#484f58"
+blue: &blue "#58a6ff"
+blue_light: &blue_light "#79c0ff"
+green: &green "#3fb950"
+green_light: &green_light "#56d364"
+grey: &grey "#8b949e"
+grey_dark: &grey_dark "#6e7681"
+grey_light: &grey_light "#7d8590"
+orange: &orange "#f0883e"
+orange_light: &orange_light "#ffa657"
+purple: &purple "#d2a8ff"
+red: &red "#f85149"
+red_dark: &red_dark "#ff7b72"
+yellow: &yellow "#d29922"
+yellow_light: &yellow_light "#e3b341"
+cyan: &cyan "#39c5cf"
+cyan_light: &cyan_light "#56d4dd"
+string: &string "#a5d6ff"
+white: &white "#b1bac4"
+# Skin...
+k9s:
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *green_light
+  prompt:
+    fgColor: *foreground
+    bgColor: *background
+    suggestColor: *orange
+  info:
+    fgColor: *grey
+    sectionColor: *green_light
+  help:
+    fgColor: *foreground
+    bgColor: *background
+    keyColor: *yellow_light
+    numKeyColor: *blue_light
+    sectionColor: *purple
+  dialog:
+    fgColor: *foreground
+    bgColor: *background_secondary
+    buttonFgColor: *foreground
+    buttonBgColor: *grey_dark
+    buttonFocusFgColor: *background
+    buttonFocusBgColor: *blue
+    labelFgColor: *orange
+    fieldFgColor: *blue_light
+  frame:
+    border:
+      fgColor: *grey_dark
+      focusColor: *blue
+    menu:
+      fgColor: *grey
+      keyColor: *yellow_light
+      numKeyColor: *yellow_light
+    crumbs:
+      fgColor: *background
+      bgColor: *blue
+      activeColor: *yellow_light
+    status:
+      newColor: *cyan_light
+      modifyColor: *yellow
+      addColor: *green
+      pendingColor: *orange
+      errorColor: *red
+      highlightColor: *yellow_light
+      killColor: *purple
+      completedColor: *grey
+    title:
+      fgColor: *blue
+      bgColor: *background
+      highlightColor: *purple
+      counterColor: *foreground
+      filterColor: *cyan
+  views:
+    charts:
+      bgColor: *background
+      defaultDialColors:
+        - *green
+        - *red
+      defaultChartColors:
+        - *blue
+        - *green
+        - *purple
+        - *cyan
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      cursorFgColor: *background
+      cursorBgColor: *blue
+      markColor: *yellow_light
+      header:
+        fgColor: *grey
+        bgColor: *background
+        sorterColor: *cyan
+    xray:
+      fgColor: *blue
+      bgColor: *background
+      cursorColor: *foreground
+      graphicColor: *cyan
+      showIcons: false
+    yaml:
+      keyColor: *blue_light
+      colonColor: *grey
+      valueColor: *foreground
+    logs:
+      fgColor: *grey
+      bgColor: *background
+      indicator:
+        fgColor: *blue
+        bgColor: *background
+        toggleOnColor: *green
+        toggleOffColor: *grey_dark
+    help:
+      fgColor: *grey
+      bgColor: *background
+      indicator:
+        fgColor: *blue
+
