@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -70,7 +72,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git gcloud terraform)
 
 # Skip compaudit security check (speeds up compinit)
 ZSH_DISABLE_COMPFIX=true
@@ -114,7 +116,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # gcloud
 export CLOUDSDK_PYTHON="$(brew --prefix python@3.14)/bin/python3"
-export PATH="$(gcloud info --format="value(installation.sdk_root)")/bin:$PATH"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # starship
