@@ -1,3 +1,5 @@
+[[ -n $ZPROF ]] && zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -124,3 +126,5 @@ eval "$(starship init zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+[[ -n $ZPROF ]] && zprof

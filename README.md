@@ -22,3 +22,17 @@ iterm2/
 Brewfile
 install.sh
 ```
+
+## Benchmark
+
+Total startup time:
+
+```sh
+for i in {1..5}; do /usr/bin/time zsh -i -c exit; done
+```
+
+Per-function breakdown with [zprof](https://zsh.sourceforge.io/Doc/Release/Zsh-Modules.html#The-zsh_002fzprof-Module):
+
+```sh
+ZPROF=1 zsh -i -c exit
+```
