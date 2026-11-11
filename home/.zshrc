@@ -111,10 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k=kubectl
 
-# nvm - always load
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+# mise
+eval "$(mise activate zsh)"
 
 # gcloud
 export CLOUDSDK_PYTHON="$(brew --prefix python@3.14)/bin/python3"

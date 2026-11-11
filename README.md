@@ -6,6 +6,7 @@ Personal macOS config:
 - [iTerm2](https://iterm2.com) profile
 - [zsh](https://www.zsh.org) ([Oh My Zsh](https://ohmyz.sh) + [starship](https://starship.rs))
 - [fzf](https://github.com/junegunn/fzf)
+- [mise](https://mise.jdx.dev)
 - [Neovim](https://neovim.io) ([LazyVim](https://www.lazyvim.org))
 - [k9s](https://k9scli.io) theme
 
@@ -15,6 +16,7 @@ Personal macOS config:
 home/
   .zshrc  .bashrc  .fzf.zsh  .fzf.bash
   .config/starship.toml
+  .config/mise/
   .config/nvim/
   Library/Application Support/k9s/skins/
   Library/Application Support/iTerm2/DynamicProfiles/dotfiles.json

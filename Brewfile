@@ -41,7 +41,6 @@ brew "terragrunt"
 cask "gcloud-cli"
 
 # Languages & runtimes
-brew "nvm"
 brew "mise"
 brew "pipx"
 brew "uv"
