@@ -74,7 +74,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gcloud terraform)
+plugins=(gcloud terraform)
 
 # Skip compaudit security check (speeds up compinit)
 ZSH_DISABLE_COMPFIX=true
