@@ -1,6 +1,7 @@
 # Shell & terminal
 brew "starship"
 brew "fzf"
+brew "fzf-tab"
 cask "iterm2"
 cask "font-jetbrains-mono-nerd-font"
 
