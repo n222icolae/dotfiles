@@ -20,7 +20,6 @@ cask "rar"
 brew "lazygit"
 brew "git-quick-stats"
 brew "git-sizer"
-brew "git-filter-repo"
 brew "pre-commit"
 
 # Kubernetes
@@ -43,7 +42,6 @@ cask "gcloud-cli"
 
 # Languages & runtimes
 brew "mise"
-brew "pipx"
 brew "uv"
 
 # Network & HTTP
