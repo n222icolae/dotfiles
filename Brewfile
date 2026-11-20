@@ -10,7 +10,10 @@ cask "font-jetbrains-mono-nerd-font"
 brew "neovim"
 cask "sublime-text"
 
-# Files & search
+# AI
+cask "claude-code"
+
+# Files & archives
 brew "fd"
 brew "ripgrep"
 brew "tree"
@@ -57,8 +60,6 @@ brew "jq"
 brew "yq"
 brew "watch"
 brew "macmon"
-brew "pango"
 
 # Apps
-cask "claude-code"
 cask "slack"
