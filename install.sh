@@ -34,11 +34,6 @@ for src in "$DOTFILES/home/$K9S"/*; do
   link "$src" "$HOME/$K9S/$(basename "$src")"
 done
 
-ITERM="Library/Application Support/iTerm2/DynamicProfiles"
-for src in "$DOTFILES/home/$ITERM"/*; do
-  link "$src" "$HOME/$ITERM/$(basename "$src")"
-done
-
 if [ "${1:-}" = "--brew" ]; then
   command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew bundle --file="$DOTFILES/Brewfile"

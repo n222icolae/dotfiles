@@ -3,7 +3,6 @@
 Personal macOS config:
 
 - [Homebrew](https://brew.sh) bundle
-- [iTerm2](https://iterm2.com) profile
 - [Ghostty](https://ghostty.org)
 - [zsh](https://www.zsh.org) ([Oh My Zsh](https://ohmyz.sh) + [starship](https://starship.rs))
 - [fzf](https://github.com/junegunn/fzf)
@@ -22,8 +21,6 @@ home/
   .config/yamllint/
   .config/nvim/
   Library/Application Support/k9s/skins/
-  Library/Application Support/iTerm2/DynamicProfiles/dotfiles.json
-iterm2/
 Brewfile
 install.sh
 ```

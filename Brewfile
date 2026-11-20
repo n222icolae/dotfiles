@@ -2,7 +2,6 @@
 brew "starship"
 brew "fzf"
 brew "fzf-tab"
-cask "iterm2"
 cask "ghostty"
 cask "font-jetbrains-mono-nerd-font"
 
