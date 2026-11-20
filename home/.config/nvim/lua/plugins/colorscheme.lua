@@ -1,13 +1,13 @@
 return {
-  {
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    priority = 1000,
-    config = function()
-      require("kanagawa").setup()
-      -- vim.cmd("colorscheme kanagawa")
-    end,
-  },
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   name = "kanagawa",
+  --   priority = 1000,
+  --   config = function()
+  --     require("kanagawa").setup()
+  --     -- vim.cmd("colorscheme kanagawa")
+  --   end,
+  -- },
   {
     "projekt0n/github-nvim-theme",
     name = "github-nvim-theme",
@@ -31,7 +31,6 @@ return {
           },
         },
       })
-      vim.cmd("colorscheme github_dark_default")
     end,
   },
 }

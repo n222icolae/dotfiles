@@ -49,6 +49,7 @@ require("lazy").setup({
 
     -- ai
     { import = "lazyvim.plugins.extras.ai.claudecode" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
 
     -- other
     { import = "plugins" },
