@@ -14,6 +14,13 @@ return {
     priority = 1000,
     config = function()
       require("github-theme").setup({
+        options = {
+          transparent = true,
+          darken = {
+            floats = false,
+            sidebars = { enable = false },
+          },
+        },
         groups = {
           all = {
             CursorLine = { bg = "#222222" },
