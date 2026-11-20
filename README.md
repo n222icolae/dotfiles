@@ -17,6 +17,7 @@ home/
   .zshrc  .bashrc  .fzf.zsh  .fzf.bash
   .config/starship.toml
   .config/mise/
+  .config/yamllint/
   .config/nvim/
   Library/Application Support/k9s/skins/
   Library/Application Support/iTerm2/DynamicProfiles/dotfiles.json

@@ -100,6 +100,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
 # else
 #   export EDITOR='nvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -121,7 +122,7 @@ alias k=kubectl
 eval "$(mise activate zsh)"
 
 # gcloud
-export CLOUDSDK_PYTHON="$(brew --prefix python@3.14)/bin/python3"
+export CLOUDSDK_PYTHON="$HOMEBREW_PREFIX/opt/python@3.14/bin/python3"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # starship
