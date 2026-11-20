@@ -4,6 +4,7 @@ Personal macOS config:
 
 - [Homebrew](https://brew.sh) bundle
 - [iTerm2](https://iterm2.com) profile
+- [Ghostty](https://ghostty.org)
 - [zsh](https://www.zsh.org) ([Oh My Zsh](https://ohmyz.sh) + [starship](https://starship.rs))
 - [fzf](https://github.com/junegunn/fzf)
 - [mise](https://mise.jdx.dev)
@@ -16,6 +17,7 @@ Personal macOS config:
 home/
   .zshrc  .bashrc  .fzf.zsh  .fzf.bash
   .config/starship.toml
+  .config/ghostty/config.ghostty
   .config/mise/
   .config/yamllint/
   .config/nvim/

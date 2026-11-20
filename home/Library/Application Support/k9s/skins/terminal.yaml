@@ -1,31 +1,18 @@
-# -----------------------------------------------------------------------------
-# GitHub Dark Default Skin
-# -----------------------------------------------------------------------------
-# Styles...
-foreground: &foreground "#e6edf3"
-background: &background "#0d1117"
-background_secondary: &background_secondary "#161b22"
-background_dark: &background_dark "#04070d"
-black: &black "#484f58"
-blue: &blue "#58a6ff"
-blue_light: &blue_light "#79c0ff"
-green: &green "#3fb950"
-green_light: &green_light "#56d364"
-grey: &grey "#8b949e"
-grey_dark: &grey_dark "#6e7681"
-grey_light: &grey_light "#7d8590"
-orange: &orange "#f0883e"
-orange_light: &orange_light "#ffa657"
-purple: &purple "#d2a8ff"
-red: &red "#f85149"
-red_dark: &red_dark "#ff7b72"
-yellow: &yellow "#d29922"
-yellow_light: &yellow_light "#e3b341"
-cyan: &cyan "#39c5cf"
-cyan_light: &cyan_light "#56d4dd"
-string: &string "#a5d6ff"
-white: &white "#b1bac4"
-# Skin...
+# Uses the terminal's ANSI palette, so it follows the terminal theme
+foreground: &foreground default
+background: &background default
+black: &black black
+grey: &grey gray
+blue: &blue navy
+blue_light: &blue_light blue
+green: &green green
+green_light: &green_light lime
+yellow: &yellow olive
+yellow_light: &yellow_light yellow
+red: &red maroon
+purple: &purple fuchsia
+cyan: &cyan teal
+cyan_light: &cyan_light aqua
 k9s:
   body:
     fgColor: *foreground
@@ -34,7 +21,7 @@ k9s:
   prompt:
     fgColor: *foreground
     bgColor: *background
-    suggestColor: *orange
+    suggestColor: *yellow
   info:
     fgColor: *grey
     sectionColor: *green_light
@@ -46,36 +33,36 @@ k9s:
     sectionColor: *purple
   dialog:
     fgColor: *foreground
-    bgColor: *background_secondary
+    bgColor: *background
     buttonFgColor: *foreground
-    buttonBgColor: *grey_dark
-    buttonFocusFgColor: *background
-    buttonFocusBgColor: *blue
-    labelFgColor: *orange
+    buttonBgColor: *grey
+    buttonFocusFgColor: *black
+    buttonFocusBgColor: *blue_light
+    labelFgColor: *yellow
     fieldFgColor: *blue_light
   frame:
     border:
-      fgColor: *grey_dark
-      focusColor: *blue
+      fgColor: *grey
+      focusColor: *blue_light
     menu:
       fgColor: *grey
       keyColor: *yellow_light
       numKeyColor: *yellow_light
     crumbs:
-      fgColor: *background
-      bgColor: *blue
+      fgColor: *black
+      bgColor: *blue_light
       activeColor: *yellow_light
     status:
       newColor: *cyan_light
       modifyColor: *yellow
       addColor: *green
-      pendingColor: *orange
+      pendingColor: *yellow
       errorColor: *red
       highlightColor: *yellow_light
       killColor: *purple
       completedColor: *grey
     title:
-      fgColor: *blue
+      fgColor: *blue_light
       bgColor: *background
       highlightColor: *purple
       counterColor: *foreground
@@ -87,22 +74,22 @@ k9s:
         - *green
         - *red
       defaultChartColors:
-        - *blue
+        - *blue_light
         - *green
         - *purple
         - *cyan
     table:
       fgColor: *foreground
       bgColor: *background
-      cursorFgColor: *background
-      cursorBgColor: *blue
+      cursorFgColor: *black
+      cursorBgColor: *blue_light
       markColor: *yellow_light
       header:
         fgColor: *grey
         bgColor: *background
         sorterColor: *cyan
     xray:
-      fgColor: *blue
+      fgColor: *blue_light
       bgColor: *background
       cursorColor: *foreground
       graphicColor: *cyan
@@ -115,13 +102,12 @@ k9s:
       fgColor: *grey
       bgColor: *background
       indicator:
-        fgColor: *blue
+        fgColor: *blue_light
         bgColor: *background
         toggleOnColor: *green
-        toggleOffColor: *grey_dark
+        toggleOffColor: *grey
     help:
       fgColor: *grey
       bgColor: *background
       indicator:
-        fgColor: *blue
-
+        fgColor: *blue_light
