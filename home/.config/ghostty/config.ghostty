@@ -5,7 +5,6 @@ font-style = SemiBold
 font-size = 12
 
 background-opacity = 0.9
-macos-titlebar-style = tabs
 unfocused-split-opacity = 0.5
 
 cursor-style = block
