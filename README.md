@@ -1,29 +1,55 @@
 # dotfiles
 
-Personal macOS config:
+Personal macOS config.
 
-- [Homebrew](https://brew.sh) bundle
-- [Ghostty](https://ghostty.org)
-- [zsh](https://www.zsh.org) ([Oh My Zsh](https://ohmyz.sh) + [starship](https://starship.rs))
-- [fzf](https://github.com/junegunn/fzf)
-- [mise](https://mise.jdx.dev)
-- [Neovim](https://neovim.io) ([LazyVim](https://www.lazyvim.org))
-- [k9s](https://k9scli.io) theme
+## Tools
 
-## Layout
+In install order. Paths are relative to `home/`.
 
+### Base
+
+- [Homebrew](https://brew.sh): `Brewfile`
+
+### Terminal
+
+- [Ghostty](https://ghostty.org): `.config/ghostty/`
+
+### Shell
+
+- [zsh](https://www.zsh.org) with [Oh My Zsh](https://ohmyz.sh): `.zshrc`
+- [starship](https://starship.rs): `.config/starship.toml`
+- [fzf](https://github.com/junegunn/fzf) with [fzf-tab](https://github.com/Aloxaf/fzf-tab): `.fzf.zsh`, `.fzf.bash`, `.bashrc`
+
+### Runtimes
+
+- [mise](https://mise.jdx.dev): `.config/mise/`
+
+### Editor
+
+- [Neovim](https://neovim.io) with [LazyVim](https://www.lazyvim.org): `.config/nvim/`
+
+### Kubernetes
+
+- [k9s](https://k9scli.io) skin: `Library/Application Support/k9s/skins/`
+
+## Install
+
+```sh
+./install.sh --brew
 ```
-home/
-  .zshrc  .bashrc  .fzf.zsh  .fzf.bash
-  .config/starship.toml
-  .config/ghostty/config.ghostty
-  .config/mise/
-  .config/yamllint/
-  .config/nvim/
-  Library/Application Support/k9s/skins/
-Brewfile
-install.sh
-```
+
+Links `home/` into `~` (existing files are backed up to `~/.dotfiles_backup/`), installs the Brewfile and mise tools, and sets the k9s skin. Oh My Zsh is installed separately, the script prints the command.
+
+## Update
+
+- Homebrew: `brew update && brew upgrade`
+- Ghostty: Ghostty → Check for Updates
+- Oh My Zsh: `omz update`
+- mise: `mise upgrade`
+- LazyVim and plugins: `:Lazy update`, then commit `lazy-lock.json`
+- Neovim tools: `:Mason`, then `U`
+
+After adding or removing a package, update `Brewfile` and run `brew bundle check`.
 
 ## Benchmark
 
