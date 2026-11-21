@@ -12,3 +12,6 @@ macos-option-as-alt = left
 
 shell-integration-features = no-cursor,ssh-env,ssh-terminfo
 auto-update = check
+
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
