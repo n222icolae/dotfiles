@@ -36,10 +36,21 @@ done
 
 if [ "${1:-}" = "--brew" ]; then
   command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   brew bundle --file="$DOTFILES/Brewfile"
+  mise install
+fi
+
+K9S_CONFIG="$HOME/$K9S/config.yaml"
+if command -v yq >/dev/null; then
+  [ -f "$K9S_CONFIG" ] || echo "k9s: {}" >"$K9S_CONFIG"
+  yq -i '.k9s.ui.skin = "terminal"' "$K9S_CONFIG"
+  echo "set     k9s skin"
+else
+  echo "note: yq not found, set k9s.ui.skin: terminal in $K9S_CONFIG"
 fi
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "note: Oh My Zsh not found — install with:"
+  echo "note: Oh My Zsh not found, install with:"
   echo '  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc'
 fi

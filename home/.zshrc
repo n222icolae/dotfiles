@@ -122,7 +122,6 @@ alias k=kubectl
 eval "$(mise activate zsh)"
 
 # gcloud
-export CLOUDSDK_PYTHON="$HOMEBREW_PREFIX/opt/python@3.14/bin/python3"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # starship
