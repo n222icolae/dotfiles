@@ -1,4 +1,6 @@
 theme = GitHub Dark Default
+# theme = Rose Pine
+
 
 font-family = JetBrainsMono Nerd Font Mono
 font-style = SemiBold
@@ -15,3 +17,5 @@ auto-update = check
 
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
+
+font-feature = -calt
