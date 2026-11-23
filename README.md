@@ -47,7 +47,7 @@ Links `home/` into `~` (existing files are backed up to `~/.dotfiles_backup/`), 
 zsh -i -c exit
 
 # Brewfile installed, expected: The Brewfile's dependencies are satisfied.
-brew bundle check --verbose
+brew bundle check --no-upgrade --verbose
 
 # mise active in the shell, expected: activated: yes
 mise doctor | grep activated
