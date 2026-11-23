@@ -37,7 +37,8 @@ brew "kustomize"
 cask "docker-desktop"
 
 # IaC
-brew "terraform"
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
 brew "terragrunt"
 
 # Cloud
