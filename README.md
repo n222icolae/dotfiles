@@ -40,6 +40,37 @@ In install order. Paths are relative to `home/`.
 
 Links `home/` into `~` (existing files are backed up to `~/.dotfiles_backup/`), installs Homebrew, the Brewfile and mise tools, and sets the k9s skin. Oh My Zsh is installed separately, the script prints the command. Safe to rerun; use `./install.sh --links-only` to only refresh the links.
 
+## Verify
+
+```sh
+# shell loads without errors, expected: no output
+zsh -i -c exit
+
+# Brewfile installed, expected: The Brewfile's dependencies are satisfied.
+brew bundle check --verbose
+
+# mise active in the shell, expected: activated: yes
+mise doctor | grep activated
+
+# starship prompt active, expected: zsh
+echo $STARSHIP_SHELL
+
+# Mason tooling, expected: node, npm and python OK
+nvim "+checkhealth mason"
+```
+
+## Troubleshooting
+
+- "not in the sudoers file" when installing casks: no admin rights. Install into `~/Applications` and rerun `./install.sh`. `docker-desktop` always needs admin.
+
+  ```sh
+  brew install --cask --appdir=~/Applications ghostty sublime-text
+  ```
+
+- Prompt is `➜` instead of starship, or `mise doctor` says `activated: no`: the Oh My Zsh installer replaced `~/.zshrc`. Run `./install.sh --links-only`, then `exec zsh`.
+- Brew runs `./bootstrap` or `make` and takes hours: macOS is too old for prebuilt packages. Update macOS, then rerun.
+- Mason can't find `node`: Neovim was started from a shell without mise. Start it from a tab where `node -v` works.
+
 ## Update
 
 - Homebrew: `brew update && brew upgrade`

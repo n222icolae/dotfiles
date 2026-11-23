@@ -44,7 +44,11 @@ if [ -z "${LINKS_ONLY:-}" ]; then
   command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
   brew bundle --file="$DOTFILES/Brewfile" || echo "warn: some Brewfile entries failed, rerun brew bundle"
-  mise install
+  if command -v mise >/dev/null; then
+    mise install
+  else
+    echo "note: mise not installed, rerun ./install.sh after fixing brew bundle"
+  fi
 fi
 
 K9S_CONFIG="$HOME/$K9S/config.yaml"
