@@ -35,10 +35,10 @@ In install order. Paths are relative to `home/`.
 ## Install
 
 ```sh
-./install.sh --brew
+./install.sh
 ```
 
-Links `home/` into `~` (existing files are backed up to `~/.dotfiles_backup/`), installs the Brewfile and mise tools, and sets the k9s skin. Oh My Zsh is installed separately, the script prints the command.
+Links `home/` into `~` (existing files are backed up to `~/.dotfiles_backup/`), installs Homebrew, the Brewfile and mise tools, and sets the k9s skin. Oh My Zsh is installed separately, the script prints the command. Safe to rerun; use `./install.sh --links-only` to only refresh the links.
 
 ## Update
 

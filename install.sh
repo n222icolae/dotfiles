@@ -4,6 +4,12 @@ set -euo pipefail
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP="$HOME/.dotfiles_backup/$(date +%Y%m%d-%H%M%S)"
 
+case "${1:-}" in
+  "") ;;
+  --links-only) LINKS_ONLY=1 ;;
+  *) echo "usage: $0 [--links-only]"; exit 1 ;;
+esac
+
 link() {
   local src="$1" dst="$2"
   if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
@@ -34,10 +40,10 @@ for src in "$DOTFILES/home/$K9S"/*; do
   link "$src" "$HOME/$K9S/$(basename "$src")"
 done
 
-if [ "${1:-}" = "--brew" ]; then
+if [ -z "${LINKS_ONLY:-}" ]; then
   command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  brew bundle --file="$DOTFILES/Brewfile"
+  brew bundle --file="$DOTFILES/Brewfile" || echo "warn: some Brewfile entries failed, rerun brew bundle"
   mise install
 fi
 
