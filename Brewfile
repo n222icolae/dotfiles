@@ -59,6 +59,3 @@ brew "jq"
 brew "yq"
 brew "watch"
 brew "macmon"
-
-# Apps
-cask "slack"
