@@ -17,7 +17,7 @@ brew "fd"
 brew "ripgrep"
 brew "tree"
 brew "ncdu"
-cask "rar"
+# cask "rar"
 
 # Git
 brew "lazygit"
@@ -34,7 +34,7 @@ brew "helmfile"
 brew "kustomize"
 
 # Containers
-cask "docker-desktop"
+# cask "docker-desktop"
 
 # IaC: opentofu and terragrunt are installed via mise
 
