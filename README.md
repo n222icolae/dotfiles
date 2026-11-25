@@ -22,7 +22,7 @@ In install order. Paths are relative to `home/`.
 
 ### Runtimes
 
-- [mise](https://mise.jdx.dev): `.config/mise/`
+- [mise](https://mise.jdx.dev): `.config/mise/` (node, [OpenTofu](https://opentofu.org), terragrunt)
 
 ### Editor
 

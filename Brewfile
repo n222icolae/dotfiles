@@ -36,10 +36,7 @@ brew "kustomize"
 # Containers
 cask "docker-desktop"
 
-# IaC
-tap "hashicorp/tap"
-brew "hashicorp/tap/terraform"
-brew "terragrunt"
+# IaC: opentofu and terragrunt are installed via mise
 
 # Cloud
 cask "gcloud-cli"
